@@ -19,13 +19,12 @@
             align-items: center;
             gap: 40px;
         }
-        /* 炫酷大标题：渐变+文字阴影+悬浮放大 */
+        /* 顶部标题 */
         .title {
             font-size: 42px;
             font-weight: bold;
             letter-spacing: 4px;
             text-align: center;
-            /* 彩色渐变文字 */
             background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
             -webkit-background-clip: text;
             color: transparent;
@@ -36,7 +35,7 @@
             transform: scale(1.05);
             text-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
         }
-        /* 正文区域：美化字体、发光、行间距、边框卡片 */
+        /* 文章区域 */
         .article {
             max-width: 800px;
             padding: 30px;
@@ -44,25 +43,22 @@
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-            /* 字体设置 */
             font-size: 18px;
             line-height: 2;
             color: #f0f0f0;
             text-align: left;
-            /* 文字轻微发光 */
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
         .article p {
             margin-bottom: 20px;
         }
-        /* 加粗小标题单独特效 */
         .article strong {
             font-size: 20px;
             color: #ffd700;
             letter-spacing: 2px;
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
         }
-        /* 图片保留原有动效 */
+        /* 图片样式 */
         img {
             max-width: 650px;
             width: 90%;
@@ -74,6 +70,23 @@
         img:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+        /* 返回按钮样式 */
+        .back-btn {
+            margin-top: 20px;
+            padding: 12px 32px;
+            font-size: 18px;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(255,215,0,0.5);
+        }
+        .back-btn:hover {
+            background: #ffd700;
+            color: #1a2a6c;
+            box-shadow: 0 0 15px #ffd700;
         }
     </style>
 </head>
@@ -105,5 +118,8 @@
     </div>
 
     <img src="snow_white.jpeg" alt="雪景">
+
+    <!-- 返回首页按钮 -->
+    <a href="index.html" class="back-btn">返回首页</a>
 </body>
 </html>
