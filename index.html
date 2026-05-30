@@ -1,2 +1,45 @@
-Hello!!
-<img src="snow_white.jpeg">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的炫酷页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            /* 页面背景色 */
+            background-color: #f0f4f8;
+            /* 让内容整体居中，垂直+水平 */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            font-family: "微软雅黑", sans-serif;
+        }
+        .text {
+            font-size: 48px;
+            color: #222;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        img {
+            /* 限制图片宽度，防止过大 */
+            max-width: 600px;
+            width: 90%;
+            /* 圆角 */
+            border-radius: 16px;
+            /* 阴影立体效果 */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="text">hello</div>
+    <img src="snow_white.jpeg" alt="图片">
+</body>
+</html>
