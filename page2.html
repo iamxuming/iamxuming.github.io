@@ -1,59 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background: #0c0c1e;
-    padding: 50px 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-.title {
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-align: center;
-    background: linear-gradient(90deg, #00ffff, #ff00ff);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 20px #00ffff;
-    transition: all 0.3s ease;
-}
-.title:hover {
-    transform: scale(1.05);
-    text-shadow: 0 0 30px #ff00ff;
-}
-.article {
-    max-width: 800px;
-    padding: 30px;
-    background: rgba(30, 30, 60, 0.6);
-    border-radius: 16px;
-    border: 1px solid #00ffff;
-    font-size: 18px;
-    line-height: 2;
-    color: #e8e8ff;
-}
-.article p {
-    margin-bottom: 20px;
-}
-.article strong {
-    font-size: 20px;
-    color: #ff00ff;
-    letter-spacing: 2px;
-}
-img {
-    max-width: 650px;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 0 25px #00ffff;
-    transition: all 0.4s ease;
-    user-select: none;
-}
-img:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 40px #ff00ff;
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动效页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            padding: 50px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        /* 炫酷大标题：渐变+文字阴影+悬浮放大 */
+        .title {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-align: center;
+            /* 彩色渐变文字 */
+            background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+        .title:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+        }
+        /* 正文区域：美化字体、发光、行间距、边框卡片 */
+        .article {
+            max-width: 800px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            /* 字体设置 */
+            font-size: 18px;
+            line-height: 2;
+            color: #f0f0f0;
+            text-align: left;
+            /* 文字轻微发光 */
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        .article p {
+            margin-bottom: 20px;
+        }
+        /* 加粗小标题单独特效 */
+        .article strong {
+            font-size: 20px;
+            color: #ffd700;
+            letter-spacing: 2px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+        /* 图片保留原有动效 */
+        img {
+            max-width: 650px;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            transition: all 0.4s ease;
+            user-select: none;
+        }
+        img:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">菜市场常见辣椒品种小科普</div>
+
+    <div class="article">
+        <p>逛菜市场时，总能看到各式各样的辣椒，它们外形、辣度、口感各不相同，吃法也有讲究。下面简单介绍几种最常见的辣椒，方便区分和选用。</p>
+
+        <p><strong>甜椒（菜椒/灯笼椒）</strong><br>
+        外形圆润饱满，像小灯笼，果肉厚实。几乎没有辣味，口感清甜脆嫩。适合清炒、做配菜、凉拌，不吃辣的人也能放心吃。</p>
+
+        <p><strong>尖椒</strong><br>
+        身形细长、尾部尖尖，有青、红两种颜色。辣度偏微辣，皮薄香脆。家常用来做虎皮尖椒、炒菜都很合适，是餐桌上的常客。</p>
+
+        <p><strong>线椒</strong><br>
+        体态修长顺直，表皮光滑。辣度中等，香味浓郁，果肉偏薄。常用来爆炒、腌制，也可晒干做成干辣椒，提味效果很好。</p>
+
+        <p><strong>螺丝椒</strong><br>
+        表面凹凸、自带螺旋褶皱。辣味足、后劲大，香气浓郁。最适合搭配肉类同炒，香辣入味，风味十足。</p>
+
+        <p><strong>二荆条</strong><br>
+        细长微弯，成熟后颜色红亮。辣度温和，香辣兼备，是制作红油、豆瓣酱的优质原料，炒菜提色又增香。</p>
+
+        <p><strong>小米椒（野山椒）</strong><br>
+        个头小巧，颜色鲜红或青绿。辣度极高，辣味浓烈。一般少量用来提辣、做蘸料、泡椒，不适合大量直接食用。</p>
+
+        <p>简单总结：想吃不辣的选甜椒，微辣下饭选尖椒、线椒，爱吃重辣就选螺丝椒和小米椒，想要香浓红油，优先挑二荆条。</p>
+    </div>
+
+    <img src="snow_white.jpeg" alt="雪景">
+</body>
+</html>
