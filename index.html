@@ -2,44 +2,77 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的炫酷页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏鼠标效果</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none; /* 禁止选中 */
         }
         body {
-            /* 页面背景色 */
-            background-color: #f0f4f8;
-            /* 让内容整体居中，垂直+水平 */
+            margin: 0;
+            background: #0f172a;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 30px;
-            font-family: "微软雅黑", sans-serif;
+            gap: 40px;
+            cursor: none; /* 隐藏鼠标指针 */
         }
-        .text {
-            font-size: 48px;
-            color: #222;
-            font-weight: bold;
-            letter-spacing: 4px;
+        .hello-text {
+            font-size: 60px;
+            color: #ffffff;
+            letter-spacing: 6px;
+            animation: breathe 3s ease-in-out infinite;
+        }
+        .img-box {
+            position: relative;
+            border-radius: 24px;
+            padding: 4px;
+            background: linear-gradient(45deg, #38bdf8, #a855f7, #f472b6);
+            animation: light 4s linear infinite;
         }
         img {
-            /* 限制图片宽度，防止过大 */
-            max-width: 600px;
-            width: 90%;
-            /* 圆角 */
-            border-radius: 16px;
-            /* 阴影立体效果 */
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 680px;
+            width: 90vw;
+            border-radius: 20px;
+            display: block;
+        }
+        /* 超链接样式，美化一下 */
+        a {
+            color: #38bdf8;
+            font-size: 22px;
+            text-decoration: none;
+            padding: 10px 24px;
+            border: 1px solid #38bdf8;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+        }
+        @keyframes light {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
-    <div class="text">hello</div>
-    <img src="snow_white.jpeg" alt="图片">
+    <div class="hello-text">hello</div>
+    <div class="img-box">
+        <img src="snow_white.jpeg" alt="雪景美图">
+    </div>
+    <!-- 超链接：跳转到 page2.html -->
+    <a href="page2.html">点击查看 进阶动效版</a>
 </body>
 </html>
