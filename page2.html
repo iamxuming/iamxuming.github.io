@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>动效页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        .title {
+            font-size: 52px;
+            /* 文字渐变 */
+            background: linear-gradient(90deg, #2c5282, #3182ce);
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+        .title:hover {
+            transform: scale(1.05);
+        }
+        img {
+            max-width: 650px;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(49, 130, 206, 0.3);
+            /* 过渡动画 */
+            transition: all 0.4s ease;
+            /* 禁止图片拖动 */
+            user-select: none;
+        }
+        /* 鼠标放到图片上的效果 */
+        img:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(49, 130, 206, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">hello</div>
+    <img src="snow_white.jpeg" alt="雪景">
+</body>
+</html>
