@@ -2,24 +2,28 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>动效页面</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body {
             background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            padding: 50px 20px; /* 上下左右留白，内容不贴边 */
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: 40px;
         }
+        /* 单独标题样式（只给顶部小标题用） */
         .title {
-            font-size: 52px;
-            /* 文字渐变 */
+            font-size: 36px;
+            text-align: center;
+            /* 文字渐变保留 */
             background: linear-gradient(90deg, #2c5282, #3182ce);
             -webkit-background-clip: text;
             color: transparent;
@@ -28,17 +32,26 @@
         .title:hover {
             transform: scale(1.05);
         }
+        /* 正文文章样式：重点优化排版 */
+        .article {
+            max-width: 800px;  /* 限制文章最大宽度，避免太宽难阅读 */
+            font-size: 17px;
+            line-height: 1.8;  /* 行高，行与行之间拉开距离 */
+            color: #222;
+            text-align: left;
+        }
+        /* 段落之间空一行 */
+        .article p {
+            margin-bottom: 16px;
+        }
         img {
             max-width: 650px;
             width: 90%;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(49, 130, 206, 0.3);
-            /* 过渡动画 */
             transition: all 0.4s ease;
-            /* 禁止图片拖动 */
             user-select: none;
         }
-        /* 鼠标放到图片上的效果 */
         img:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 40px rgba(49, 130, 206, 0.4);
@@ -46,28 +59,34 @@
     </style>
 </head>
 <body>
-    <div class="title"># 菜市场常见辣椒品种小科普
-逛菜市场时，总能看到各式各样的辣椒，它们外形、辣度、口感各不相同，吃法也有讲究。下面简单介绍几种最常见的辣椒，方便区分和选用。
+    <!-- 顶部标题 -->
+    <div class="title">菜市场常见辣椒品种小科普</div>
 
-**甜椒（菜椒/灯笼椒）**
-外形圆润饱满，像小灯笼，果肉厚实。几乎没有辣味，口感清甜脆嫩。适合清炒、做配菜、凉拌，不吃辣的人也能放心吃。
+    <!-- 正文内容，单独容器 -->
+    <div class="article">
+        <p>逛菜市场时，总能看到各式各样的辣椒，它们外形、辣度、口感各不相同，吃法也有讲究。下面简单介绍几种最常见的辣椒，方便区分和选用。</p>
 
-**尖椒**
-身形细长、尾部尖尖，有青、红两种颜色。辣度偏微辣，皮薄香脆。家常用来做虎皮尖椒、炒菜都很合适，是餐桌上的常客。
+        <p><strong>甜椒（菜椒/灯笼椒）</strong><br>
+        外形圆润饱满，像小灯笼，果肉厚实。几乎没有辣味，口感清甜脆嫩。适合清炒、做配菜、凉拌，不吃辣的人也能放心吃。</p>
 
-**线椒**
-体态修长顺直，表皮光滑。辣度中等，香味浓郁，果肉偏薄。常用来爆炒、腌制，也可晒干做成干辣椒，提味效果很好。
+        <p><strong>尖椒</strong><br>
+        身形细长、尾部尖尖，有青、红两种颜色。辣度偏微辣，皮薄香脆。家常用来做虎皮尖椒、炒菜都很合适，是餐桌上的常客。</p>
 
-**螺丝椒**
-表面凹凸、自带螺旋褶皱。辣味足、后劲大，香气浓郁。最适合搭配肉类同炒，香辣入味，风味十足。
+        <p><strong>线椒</strong><br>
+        体态修长顺直，表皮光滑。辣度中等，香味浓郁，果肉偏薄。常用来爆炒、腌制，也可晒干做成干辣椒，提味效果很好。</p>
 
-**二荆条**
-细长微弯，成熟后颜色红亮。辣度温和，香辣兼备，是制作红油、豆瓣酱的优质原料，炒菜提色又增香。
+        <p><strong>螺丝椒</strong><br>
+        表面凹凸、自带螺旋褶皱。辣味足、后劲大，香气浓郁。最适合搭配肉类同炒，香辣入味，风味十足。</p>
 
-**小米椒（野山椒）**
-个头小巧，颜色鲜红或青绿。辣度极高，辣味浓烈。一般少量用来提辣、做蘸料、泡椒，不适合大量直接食用。
+        <p><strong>二荆条</strong><br>
+        细长微弯，成熟后颜色红亮。辣度温和，香辣兼备，是制作红油、豆瓣酱的优质原料，炒菜提色又增香。</p>
 
-简单总结：想吃不辣的选甜椒，微辣下饭选尖椒、线椒，爱吃重辣就选螺丝椒和小米椒，想要香浓红油，优先挑二荆条。</div>
+        <p><strong>小米椒（野山椒）</strong><br>
+        个头小巧，颜色鲜红或青绿。辣度极高，辣味浓烈。一般少量用来提辣、做蘸料、泡椒，不适合大量直接食用。</p>
+
+        <p>简单总结：想吃不辣的选甜椒，微辣下饭选尖椒、线椒，爱吃重辣就选螺丝椒和小米椒，想要香浓红油，优先挑二荆条。</p>
+    </div>
+
     <img src="snow_white.jpeg" alt="雪景">
 </body>
 </html>
