@@ -1,86 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 网页设置：字体、编码 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐藏鼠标效果</title>
+    <title>我的个人介绍</title>
     <style>
+        /* 这里写样式：好看字体、全局排版 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            user-select: none; /* 禁止选中 */
         }
         body {
-            margin: 0;
-            background: #0f172a;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            /* 已删除 cursor: none; 恢复鼠标显示 */
-        }
-        .hello-text {
-            font-size: 60px;
-            color: #ffffff;
-            letter-spacing: 6px;
-            animation: breathe 3s ease-in-out infinite;
-        }
-        /* 👇 这里改成左右并排核心代码 */
-        .img-box {
-            position: relative;
-            border-radius: 24px;
-            padding: 4px;
-            background: linear-gradient(45deg, #38bdf8, #a855f7, #f472b6);
-            animation: light 4s linear infinite;
-            display: flex; /* 水平排列 */
-            gap: 12px; /* 两张图之间的间距 */
-            max-width: 90vw;
-            flex-wrap: wrap; /* 手机上自动换行，不会挤 */
-            justify-content: center;
-        }
-        img {
-            max-width: 340px; /* 单张图最大宽度 */
-            width: 100%;
-            border-radius: 20px;
-            display: block;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        /* 超链接样式，美化一下 */
-        a {
-            color: #38bdf8;
-            font-size: 22px;
-            text-decoration: none;
-            padding: 10px 24px;
-            border: 1px solid #38bdf8;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
-        a:hover {
-            background: #38bdf8;
-            color: #0f172a;
-        }
-
-        @keyframes breathe {
-            0%, 100% { opacity: 0.7; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.03); }
-        }
-        @keyframes light {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            /* 全局好看字体 */
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.8; /* 文字行间距 */
         }
     </style>
 </head>
 <body>
-    <div class="hello-text">欢迎访问我的空间</div>
-    <div class="img-box">
-        <img src="snow_white.jpeg" alt="雪景美图">
-        <img src="to_sunshine.png" alt="sun">
-    </div>
-    <!-- 超链接：跳转到 page2.html -->
-    <a href="page2.html">点击查看辣椒小科普</a>
+    <!-- 所有内容写在这里 -->
+    <p style="color: #44eed7;font-size: 38px;
+    background-color: #334c76;">大家好，我是fhdsuifhudgdtgdggdgfggg 
+        
+     <b>哈罗太阳</b>   
+        
+        
+        
+        ihsdiufhweuivhfhjfhjfhjfhjfuiehwg</p>
+     <h2>122344</h2>
+     
+     <h3 style="color: antiquewhite; background-color: #334c76;">大家好，我是123</h3>
+<img
+  class="fit-picture"
+  src="./src/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+
+<img src="./src/dog.jpg" height="300"
+style="rotate: 300deg;"/>
+
+
+
+
+
+    <!-- 个人简介章节：浅蓝色背景 -->
+<section style="background-color: #e6f7ff; padding: 40px; margin: 20px; border-radius: 15px;">
+    <h2 style="color: #334c76; margin-bottom: 20px;">📌 个人简介</h2>
+    <p style="font-size: 18px; margin-bottom: 15px;">我叫<strong>XXX</strong>，今年XX岁，是一名XX学生/爱好者。</p>
+    <p style="font-size: 38px;">性格开朗，fffhgfhgfghfhg做事认真，喜欢探索新鲜事物~</p>
+</section>
 </body>
 </html>
